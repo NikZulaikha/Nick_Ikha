@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&family=Kalam&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fff5f8 0%, #ffe6ef 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #6b304a;
+    }
+
+    header {
+      background-color: #f78fb3;
+      padding: 20px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      border-bottom: 3px solid #ffcce0;
+      padding-bottom: 10px;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      color: white;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .main-nav a:hover {
+      color: #ffe6f0;
+      text-shadow: 1px 1px 2px #d6336c;
+    }
+
+    .ribbon-top {
+      width: 80px;
+      margin: 15px auto 0;
+      display: block;
+    }
+
+    .about-section {
+      max-width: 950px;
+      margin: 30px auto;
+      background: #fff0f4;
+      padding: 30px 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .about-section h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      color: #d6336c;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 15.5px;
+      color: #a1426e;
+      line-height: 1.7;
+      text-align: justify;
+      text-indent: 30px;
+      margin-bottom: 15px;
+    }
+
+    .bio-box {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .bio-item {
+      background: #ffe9f0;
+      padding: 12px 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(255, 182, 193, 0.3);
+      font-size: 14.5px;
+      color: #6b304a;
+    }
+
+    .countdown-box {
+      background-color: #fcd6e1;
+      border: 2px solid #f78fb3;
+      padding: 12px 20px;
+      border-radius: 20px;
+      text-align: center;
+      color: #a1426e;
+      font-weight: bold;
+      font-size: 15.5px;
+      width: fit-content;
+      margin: 30px auto 40px;
+      box-shadow: 0 4px 10px rgba(247, 143, 179, 0.2);
+    }
+
+    .video-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+      color: #d6336c;
+      margin-bottom: 20px;
+    }
+
+    .video-skill-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 16 / 9;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(255, 173, 199, 0.4);
+      object-fit: cover;
+    }
+
+    .btn-skill {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #f78fb3;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 15px;
+      box-shadow: 0 4px 12px rgba(247, 143, 179, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-skill:hover {
+      background-color: #e4608e;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #f78fb3;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 13.5px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        font-size: 28px;
+      }
+
+      .about-section {
+        margin: 20px 15px;
+        padding: 25px 20px;
+      }
+
+      .video-section h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-header">
+      <div class="logo">⋆. 𐙚 ˚Nick Zulaikha ⋆. 𐙚 ˚</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="education.html">Education</a></li> 
+          <li><a href="family.html">Family</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <img src="images/RIBEN.png" alt="Ribbon" class="ribbon-top" />
+
+  <main>
+    <section class="about-section">
+      <h1>About Me</h1>
+
+      <p>Hello! My name is Nick Zulaikha and I’m from Wakaf Bharu, Kelantan. I’m usually quiet, but once I feel comfortable, I become talkative and expressive. I open up more around people I trust and enjoy sharing stories when the moment feels right. Currently, I’m pursuing my studies in Information Management at UiTM Puncak Perdana.</p>
+
+      <p>Outside of my studies, I enjoy simple moments that bring peace and spending time with people I care about. I love soft colours (especially pink!), aesthetic visuals, and anything that sparks inspiration. I consider myself a calm, thoughtful, and creative person who always tries to see beauty in everyday life.</p>
+
+      <p>This website is a personal space I’ve created to share more about who I am. I will share my background studies, my family, and the things that matter most to me. I hope as you explore this page, you get to know the real me and feel a bit of the warmth and heart I’ve put into everything here. Thank you for visiting!</p>
+
+      <div class="bio-box">
+        <div class="bio-item">✦ Course: Information Management ✦</div>
+        <div class="bio-item">✦ Interest: Record video, Make-up ✦</div>
+        <div class="bio-item">✦ Favourite Color: Pink and pastel ✦</div>
+      </div>
+
+      <div id="countdown" class="countdown-box">
+        Countdown to my birthday...
+      </div>
+
+      <div class="video-section">
+        <h2>My Hobby is Recording the Sky 𓇢𓆸</h2>
+        <div class="video-skill-wrapper">
+
+       <video controls width="400">
+       <source src="images/video 1.mp4" type="video/mp4">
+        </video>
+
+          <a href="skills.html" class="btn-skill">★ View My Skills ★</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  
+  </footer>
+
+  <script>
+    function updateCountdown() {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      let birthday = new Date(`${currentYear}-11-25T00:00:00`);
+      if (now > birthday) birthday = new Date(`${currentYear + 1}-11-25T00:00:00`);
+      const diff = birthday - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").textContent =
+        `♡♡♡ ${days} days ${hours}h ${minutes}m ${seconds}s left until my birthday on 25 November! ♡♡♡`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
